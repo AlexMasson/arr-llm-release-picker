@@ -1,0 +1,27 @@
+services:
+  arr-llm-release-picker:
+    build: .
+    # Or use pre-built image:
+    # image: ghcr.io/alexmasson/arr-llm-release-picker:latest
+    container_name: arr-llm-release-picker
+    environment:
+      # Required - Radarr connection
+      - RADARR_URL=http://radarr:7878
+      - RADARR_API_KEY=your_radarr_api_key
+      # Required - LLM configuration
+      - LLM_API_URL=https://api.openai.com/v1
+      - LLM_API_KEY=sk-your-key
+      - LLM_MODEL=gpt-4o
+      # Optional - Notifications
+      - NTFY_URL=
+      - NTFY_TOPIC=arr-llm-release-picker
+      # Optional - Behavior
+      - SKIP_TAG=no-ai
+      - DRY_RUN=false
+    # Optional: mount custom prompts to override bundled defaults
+    # volumes:
+    #   - ./config/arr-llm-release-picker:/config
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+

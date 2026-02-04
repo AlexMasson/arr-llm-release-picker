@@ -1,0 +1,32 @@
+# Config with secrets
+config/config.yaml
+.env
+*.env
+
+# Custom prompts (keep only default/)
+config/prompts/premium/
+config/prompts/rapide/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
