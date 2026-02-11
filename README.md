@@ -1,5 +1,13 @@
 # arr-llm-release-picker
 
+> **⚠️ On hold — waiting for upstream integration**
+>
+> The Sonarr/Radarr forks that this webhook was designed for are being deprecated in favor of a proper upstream implementation. The webhook contract will change.
+>
+> Don't set this up for now — I'll update the repo once the new hook format is finalized. If upstream integration doesn't happen, I'll rebuild against the new design.
+>
+> Follow progress on [Sonarr #8396](https://github.com/Sonarr/Sonarr/issues/8396) and [Radarr #11372](https://github.com/Radarr/Radarr/issues/11372).
+
 **Let an LLM choose your media releases instead of tweaking Custom Formats forever.**
 
 Works with [Radarr](https://github.com/AlexMasson/Radarr) (movies) and [Sonarr](https://github.com/AlexMasson/Sonarr) (TV shows) to intelligently select releases based on natural language criteria like:
